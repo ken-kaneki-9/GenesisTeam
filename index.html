@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Content and Scripts</title>
+    <link id="dynamic-stylesheet1" rel="stylesheet" type="text/css" href="" />
+    <link id="dynamic-stylesheet2" rel="stylesheet" type="text/css" href="" />
+    <link id="dynamic-stylesheet3" rel="stylesheet" type="text/css" href="" />
+  </head>
+  <body>
+    <div id="container1"></div>
+    <div id="container2"></div>
+    <div id="container3"></div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Function to load HTML content, apply CSS, and load JS files
+        function loadContentStylesAndScripts(
+          htmlUrl,
+
+          cssUrls,
+          jsUrls,
+          containerId
+        ) {
+          // Apply CSS files
+          const stylesheets = [
+            "dynamic-stylesheet1",
+            "dynamic-stylesheet2",
+            "dynamic-stylesheet3",
+          ];
+          cssUrls.forEach((url, index) => {
+            if (index < stylesheets.length) {
+              const linkElement = document.getElementById(stylesheets[index]);
+              linkElement.href = url; // Setting the href to the path of the CSS file
+            }
+          });
+
+          // Fetch and insert the HTML content into the specified container
+          fetch(htmlUrl)
+            .then((response) => {
+              if (!response.ok) {
+                throw new Error("Network response was not ok");
+              }
+              return response.text();
+            })
+            .then((data) => {
+              document.getElementById(containerId).innerHTML = data;
+
+              // Load JS files after the HTML content is loaded
+              jsUrls.forEach((url) => {
+                const scriptElement = document.createElement("script");
+                scriptElement.src = url;
+                document.body.appendChild(scriptElement);
+              });
+            })
+            .catch((error) => {
+              console.error(
+                "There was a problem with the fetch operation:",
+                error
+              );
+            });
+        }
+
+        // Load content, styles, and scripts for different containers
+        loadContentStylesAndScripts(
+          "/content/content1.html",
+          ["/css/style1.css"],
+          ["/js/script1.js"],
+          "container1"
+        );
+        // loadContentStylesAndScripts('/content/content2.html', ['/css/style2.css'], ['/js/script2.js'], 'container2');
+        // loadContentStylesAndScripts('/content/content3.html', ['/css/style3.css'], ['/js/script3.js'], 'container3');
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+svg {
+  width: 110%;
+  object-fit: cover;
+  fill: black;
+}
+svg path {
+  cursor: pointer;
+}
+svg path:hover {
+  fill: #ff9933;
+}
