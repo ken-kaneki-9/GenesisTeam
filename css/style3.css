@@ -1,0 +1,41 @@
+.footer-0 {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.footer {
+  background-color: #0b2948;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  margin-top: 20px; /* Optional: adds space between content and footer */
+}
+
+.footer .links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.footer .links div {
+  margin: 10px;
+  text-align: left;
+}
+
+.footer .links a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin: 5px 0;
+}
+
+.footer p {
+  margin: 20px 0 0 0;
+  font-size: 14px;
+}
+
+.footer .contact {
+  text-align: right;
+}
