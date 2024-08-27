@@ -1,11 +1,11 @@
-sarvil {
+.india-map-svg {
   width: 110%;
   object-fit: cover;
   fill: black;
 }
-sarvil path {
+.india-map-svg path {
   cursor: pointer;
 }
-sarvil path:hover {
+.india-map-svg path:hover {
   fill: pink;
 }
