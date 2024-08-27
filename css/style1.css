@@ -7,5 +7,5 @@ svg path {
   cursor: pointer;
 }
 svg path:hover {
-  fill: #ff9933;
+  fill: red;
 }
