@@ -1,0 +1,29 @@
+.container{
+    width:1477px;
+    height:800px;
+}
+.image{
+    width: 100%;
+    height: 350px;
+    background-image: url(/image/pexels-ifreestock-585752\ \(1\).jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.content{
+    border: solid;
+    height:100%;
+    width: 100%;
+
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height:200px;
+    color: white;
+}

@@ -7,7 +7,7 @@
   cursor: pointer;
 }
 .india-map-svg path:hover {
-  fill: pink;
+  fill: rgb(17, 5, 88);
 }
 #INTG {
   fill: blue;
