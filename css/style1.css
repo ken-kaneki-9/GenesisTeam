@@ -9,3 +9,15 @@
 .india-map-svg path:hover {
   fill: pink;
 }
+#INTG {
+  fill: blue;
+}
+#INTG:hover {
+  fill: url(#img1); /* Apply the pattern on hover */
+
+  object-fit: cover;
+  position: center; /* Maintain blue color on hover */
+}
+
+/* #INTG:hover {
+  /* background-image: url("../images/test.jpg"); */
