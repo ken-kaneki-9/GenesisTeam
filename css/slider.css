@@ -1,0 +1,31 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.slider {
+    overflow: hidden;
+    width:90vw;
+    height: 50vh;
+    position: relative;
+    border:solid;
+}
+
+.slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height:98%;
+    border: solid blue;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
