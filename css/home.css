@@ -889,7 +889,7 @@ svg path {
 }
 
 svg path:hover {
-  fill: red;
+  fill: blue;
 }
 .map path {
   stroke: white; /* Sets the stroke color to white */
